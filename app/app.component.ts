@@ -1,6 +1,8 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
-
+import { provide }           from 'angular2/core';
+import { XHRBackend }        from 'angular2/http';
+import { InMemoryBackendService, SEED_DATA }         from 'a2-in-memory-web-api/core';
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
@@ -20,7 +22,8 @@ import { HeroService } from './hero.service';
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
-    HeroService
+    HeroService,
+    provide(XHRBackend, { useClass: InMemoryBackendService }), // in-mem server
   ]
 })
 @RouteConfig([
