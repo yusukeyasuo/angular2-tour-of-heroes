@@ -9,7 +9,8 @@ import {Headers, RequestOptions} from 'angular2/http';
 export class HeroService {
   constructor(private http : Http) {}
 
-  private _heroesUrl = 'app/heroes.json';  // URL to web api
+  private _heroesUrl = 'http://private-cc7d2-angular21.apiary-mock.com/questions';
+  // private _heroesUrl = 'app/heroes.json';
 
   getHeroes() {
       return this.http.get(this._heroesUrl)
