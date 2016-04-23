@@ -10,7 +10,7 @@
 
     <!-- #enddocregion head -->
     <!-- #docregion css -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app/styles/styles.css">
     <!-- #enddocregion css -->
     <!-- #docregion head -->
     <!-- IE required polyfills, in this exact order -->
@@ -30,7 +30,7 @@
     <script src="https://npmcdn.com/a2-in-memory-web-api/web-api.js"></script>
     <script>
       System.config({packages: {app: {format: 'register', defaultExtension: 'js'}}});
-      System.import('app/main')
+      System.import('app/scripts/main')
             .then(null, console.error.bind(console));
     </script>
   </head>

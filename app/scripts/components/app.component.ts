@@ -6,7 +6,7 @@ import { InMemoryBackendService, SEED_DATA }         from 'a2-in-memory-web-api/
 import { DashboardComponent } from './dashboard.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
-import { HeroService } from './hero.service';
+import { HeroService } from '../services/hero.service';
 
 @Component({
   selector: 'my-app',
@@ -18,7 +18,7 @@ import { HeroService } from './hero.service';
     </nav>
     <router-outlet></router-outlet>
   `,
-  styleUrls: ['app/app.component.css'],
+  styleUrls: ['app/styles/app.component.css'],
   directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,

@@ -1,6 +1,6 @@
 import { Injectable } from 'angular2/core';
 
-import { Hero } from './hero';
+import { Hero } from '../models/hero';
 
 import {Http, Response} from 'angular2/http';
 import {Headers, RequestOptions} from 'angular2/http';
