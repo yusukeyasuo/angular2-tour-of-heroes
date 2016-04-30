@@ -8,14 +8,13 @@ import {Observable}     from 'rxjs/Observable';
 export class ApiService {
   constructor(private http : Http) {}
 
-  get(url: String) {
+  get(url: string) {
       return this.http.get(url)
                     .map(this.extractData)
                     .catch(this.handleError);
   }
 
-  post(url: String, body: String) {
-    let body = JSON.stringify({ name });
+  post(url: string, body: string) {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     return this.http.post(url, body, options)
