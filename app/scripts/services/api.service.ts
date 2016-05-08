@@ -21,6 +21,23 @@ export class ApiService {
       .map(this.extractData)
       .catch(this.handleError);
   }
+
+  put(url: string, body: string) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.put(url, body, options)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
+  delete(url: string) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.delete(url, options)
+      .map(this.extractData)
+      .catch(this.handleError);
+  }
+
   private extractData(res: Response) {
       if (res.status < 200 || res.status >= 300) {
         throw new Error('Bad response status: ' + res.status);

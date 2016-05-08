@@ -17,4 +17,13 @@ export class HeroService {
     let body = JSON.stringify({ name });
     return this.netService.post(this._heroesUrl, body);
   }
+
+  putHeroes() {
+    let body = JSON.stringify({ name });
+    return this.netService.put(this._heroesUrl, body);
+  }
+
+  deleteHeroes() {
+    return this.netService.delete(this._heroesUrl);
+  }
 }
